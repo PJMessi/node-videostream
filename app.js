@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const handlebars = require('express-handlebars');
 const router = require('./routes');
@@ -20,7 +21,8 @@ app.set('view engine', 'handlebars');
 // initializing routes.
 app.use(router);
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log('Server started at port 3000');
+  console.log(`Server started at port ${PORT}`);
 });

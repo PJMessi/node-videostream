@@ -5,7 +5,7 @@ const router = Router();
 
 // Test route.
 router.get('/', (request, response) => {
-  response.render('main', { players: ['prajwal', 'ashok', 'anisha'] });
+  response.render('main');
 });
 
 router.get('/video', streamVideo);
